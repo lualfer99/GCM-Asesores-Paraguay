@@ -115,56 +115,40 @@ export default function OptimizedFooter() {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div>
-            <div className="bg-gradient-to-br from-[#225DF6] to-[#1e52d9] p-6 md:p-8 rounded-3xl text-center shadow-primary-lg border border-[#225DF6]/20">
-              <h3 className="font-bold text-base md:text-lg mb-4 text-white">¿Listo para empezar?</h3>
-              <p className="text-white/90 text-sm mb-6 leading-relaxed">
-                ¡Agenda ya tu asesoría fiscal gratuita y descubre la mejor estructura para tu negocio digital!
-              </p>
-              <button
-                onClick={handleConsultaClick}
-                className="inline-block bg-white text-[#225DF6] px-6 md:px-8 py-3 md:py-4 rounded-2xl font-bold text-sm md:text-base hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
-              >
-                AGENDAR ASESORÍA GRATUITA
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Company Information */}
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="bg-gray-900/50 rounded-2xl p-6 md:p-8 mb-8">
-            <div className="flex items-center gap-3 mb-6">
-              <Building className="w-6 h-6 text-[#225DF6]" />
-              <h3 className="font-bold text-lg text-white">Información de la Empresa</h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base text-gray-300 leading-relaxed">
-              <div>
-                <p className="mb-2">
-                  <strong className="text-white">Razón Social:</strong> GCM SERVICES LLC.
-                </p>
-                <p className="mb-2">
-                  <strong className="text-white">EIN:</strong> 99-1045312
-                </p>
-                <p className="mb-2">
-                  <strong className="text-white">Sitio Web:</strong>{" "}
-                  <Link href="https://gcmasesores.io" className="text-[#225DF6] hover:underline">
-                    https://gcmasesores.io
-                  </Link>
-                </p>
+          {/* Company Information */}
+          <div className="lg:col-span-2">
+            <div className="bg-gray-900/50 rounded-2xl p-6 md:p-8 mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Building className="w-6 h-6 text-[#225DF6]" />
+                <h3 className="font-bold text-lg text-white">Información de la Empresa</h3>
               </div>
-              <div>
-                <p className="mb-2">
-                  <strong className="text-white">Dirección:</strong>
-                </p>
-                <p className="text-gray-400">
-                  4300 RIDGECREST DR SE SUITE L 1277
-                  <br />
-                  RIO RANCHO, NM 87124
-                  <br />
-                  Estados Unidos
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base text-gray-300 leading-relaxed">
+                <div>
+                  <p className="mb-2">
+                    <strong className="text-white">Razón Social:</strong> GCM SERVICES LLC.
+                  </p>
+                  <p className="mb-2">
+                    <strong className="text-white">EIN:</strong> 99-1045312
+                  </p>
+                  <p className="mb-2">
+                    <strong className="text-white">Sitio Web:</strong>{" "}
+                    <Link href="https://gcmasesores.io" className="text-[#225DF6] hover:underline">
+                      https://gcmasesores.io
+                    </Link>
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-2">
+                    <strong className="text-white">Dirección:</strong>
+                  </p>
+                  <p className="text-gray-400">
+                    4300 RIDGECREST DR SE SUITE L 1277
+                    <br />
+                    RIO RANCHO, NM 87124
+                    <br />
+                    Estados Unidos
+                  </p>
+                </div>
               </div>
             </div>
           </div>
