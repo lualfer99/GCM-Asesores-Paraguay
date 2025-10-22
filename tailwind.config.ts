@@ -20,16 +20,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: [
-          "var(--font-poppins)",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "sans-serif",
-        ],
-        poppins: ["var(--font-poppins)", "sans-serif"],
+        inter: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
