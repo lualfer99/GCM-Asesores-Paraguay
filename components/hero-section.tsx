@@ -58,8 +58,8 @@ export default function HeroSection() {
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <div className="absolute inset-0">
                 <VideoPlayer
-                  source="googledrive"
-                  videoId="1Qm4AqvB3niikThs_ukOK_OM4IlvOJUjt"
+                  source="dailymotion"
+                  videoId="k5UwAMFEaaUzFADifdI"
                   title="Video estrategia fiscal Paraguay"
                   autoplay={false}
                   controls={true}
