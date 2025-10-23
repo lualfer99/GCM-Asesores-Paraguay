@@ -46,12 +46,12 @@ export default function BenefitsSection() {
   ]
 
   return (
-    <section id="beneficios" className="py-20 bg-gray-50 relative overflow-hidden">
+    <section id="beneficios" className="bg-gray-50 relative overflow-hidden py-0">
       {/* Background decoration */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-[#225DF6]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-[#225DF6]/3 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 lg:px-6 relative">
+      <div className="container mx-auto px-4 lg:px-6 relative py-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-6 py-3 rounded-full text-sm font-semibold mb-6">
             <Zap className="w-4 h-4" />

@@ -133,7 +133,7 @@ export default function ParaguayComprehensiveSection() {
   return (
     <>
       {/* BLOCK 1 - What's Included */}
-      <section id="que-incluye" className="py-20 bg-gray-50 relative overflow-hidden">
+      <section id="que-incluye" className="bg-gray-50 relative overflow-hidden py-8">
         <div className="container mx-auto px-4 lg:px-6 relative">
           {/* Header */}
           <div className="max-w-5xl mx-auto mb-16 fade-on-scroll opacity-0">
@@ -194,7 +194,7 @@ export default function ParaguayComprehensiveSection() {
       </section>
 
       {/* BLOCK 2 - Our Process (Timeline) */}
-      <section id="proceso" className="py-20 bg-white relative overflow-hidden">
+      <section id="proceso" className="bg-white relative overflow-hidden py-8">
         <div className="container mx-auto px-4 lg:px-6 relative">
           {/* Header */}
           <div className="text-center mb-16 fade-on-scroll opacity-0">

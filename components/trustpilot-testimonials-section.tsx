@@ -391,7 +391,7 @@ export default function TrustpilotTestimonialsSection() {
         }}
       />
 
-      <section id="trustpilot-testimonials" className="py-16 md:py-20 bg-white">
+      <section id="trustpilot-testimonials" className="md:py-20 bg-white py-8">
         <div className="container mx-auto px-4 lg:px-6">
           <div
             className={`text-center mb-12 md:mb-16 transition-all duration-1000 ${

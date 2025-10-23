@@ -30,11 +30,11 @@ export default function StatsCTASection() {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-white py-8">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+          <h2 className="md:text-3xl lg:text-4xl font-bold text-gray-900 text-3xl">
             <span className="text-[#225DF6]">GCM</span> en números
           </h2>
         </div>

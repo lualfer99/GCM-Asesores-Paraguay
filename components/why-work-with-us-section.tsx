@@ -39,7 +39,7 @@ export default function WhyWorkWithUsSection() {
   }
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="bg-gray-50 relative overflow-hidden py-8">
       {/* Background decoration */}
       <div className="absolute top-20 left-0 w-96 h-96 bg-[#225DF6]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#225DF6]/3 rounded-full blur-3xl"></div>

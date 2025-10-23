@@ -129,7 +129,7 @@ Gracias,`)
             Agenda tu Consulta
           </div>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2">
+          <h2 className="md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2 text-3xl">
             Agenda ya tu consulta inicial gratuita
           </h2>
 
