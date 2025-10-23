@@ -1,4 +1,5 @@
 import { Check, X, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function WhyWorkWithUsSection() {
   const yesItems = [
@@ -28,6 +29,13 @@ export default function WhyWorkWithUsSection() {
     "Nuestra prioridad no es venderte un servicio, sino proteger tu libertad y optimizar tu carga fiscal.",
   ]
 
+  const handleCTAClick = () => {
+    const element = document.querySelector("#consulta")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="py-20 bg-gray-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -37,7 +45,7 @@ export default function WhyWorkWithUsSection() {
       <div className="container mx-auto px-4 lg:px-6 relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             ¿Por qué trabajar con <span className="text-[#225DF6]">nuestro despacho</span>?
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-8 italic">
@@ -104,13 +112,14 @@ export default function WhyWorkWithUsSection() {
 
         {/* CTA */}
         <div className="text-center">
-          <a
-            href="#consulta"
-            className="inline-flex items-center gap-2 bg-[#225DF6] text-white font-bold px-8 md:px-12 py-4 md:py-6 rounded-2xl hover:bg-[#1e52d9] transition-all duration-200 hover:scale-105 hover:shadow-lg text-lg md:text-xl"
-          >
-            <Calendar className="w-5 md:w-6 h-5 md:h-6" />
-            AGENDAR ASESORÍA GRATUITA
-          </a>
+          <Button
+              size="lg"
+              className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl"
+              onClick={handleCTAClick}
+            >
+              <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+              AGENDAR ASESORÍA GRATUITA
+          </Button>
         </div>
       </div>
     </section>

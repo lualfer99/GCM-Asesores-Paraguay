@@ -9,7 +9,11 @@ import { usePathname } from "next/navigation"
 import OptimizedImage from "./image-optimization"
 import { useRouter } from "next/navigation"
 
-export default function OptimizedHeader() {
+interface OptimizedHeaderProps {
+  mode?: "full" | "landing"
+}
+
+export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
@@ -47,6 +51,65 @@ export default function OptimizedHeader() {
     } else {
       router.push(href)
     }
+  }
+
+  if (mode === "landing") {
+    return (
+      <>
+        <header
+          className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isScrolled
+              ? "bg-gradient-to-r from-gray-50/95 via-white/95 to-blue-50/95 backdrop-blur-md border-b border-gray-200 shadow-lg"
+              : "bg-gradient-to-r from-gray-50/90 via-white/90 to-blue-50/90 backdrop-blur-sm border-b border-gray-100"
+          }`}
+        >
+          {/* Background decoration matching hero */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <div className="absolute top-0 right-10 w-32 h-32 bg-blue-600/5 rounded-full blur-2xl"></div>
+          <div className="absolute top-0 left-10 w-40 h-40 bg-blue-600/3 rounded-full blur-2xl"></div>
+
+          <div className="container mx-auto px-4 lg:px-6 relative">
+            <div className="flex items-center justify-between h-20">
+              {/* Logo - proportional size */}
+              <Link href="/" className="flex items-center transition-transform hover:scale-105">
+                <OptimizedImage
+                  src="/images/logo-blue.png"
+                  alt="GCMAsesores Logo"
+                  width={140}
+                  height={45}
+                  className="h-10 md:h-12 w-auto"
+                  priority
+                />
+              </Link>
+
+              {/* Desktop CTA - positioned right */}
+              <div className="hidden md:flex items-center">
+                <Button
+                  size="lg"
+                  className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl shadow-lg border border-white/20"
+                  onClick={() => handleNavClick("#consulta")}
+                >
+                  <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+                  AGENDAR ASESORÍA GRATUITA
+                </Button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Mobile Floating CTA */}
+        <div className="md:hidden fixed bottom-6 left-4 right-4 z-50">
+          <Button
+            size="lg"
+            className="btn-primary w-full text-base px-6 py-5 text-white font-bold rounded-2xl shadow-2xl border-2 border-white/20 backdrop-blur-sm"
+            onClick={() => handleNavClick("#consulta")}
+          >
+            <Calendar className="w-5 h-5 mr-2" />
+            AGENDAR ASESORÍA GRATUITA
+          </Button>
+        </div>
+      </>
+    )
   }
 
   return (

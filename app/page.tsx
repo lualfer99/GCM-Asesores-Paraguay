@@ -91,7 +91,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className={`${poppins.variable} min-h-screen flex flex-col bg-white text-gray-900`}>
-      <OptimizedHeader />
+      <OptimizedHeader mode="landing" />
       <main className="flex-grow">
         <HeroSection />
         <BenefitsSection />

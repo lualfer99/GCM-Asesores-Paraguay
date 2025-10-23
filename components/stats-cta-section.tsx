@@ -1,5 +1,5 @@
 import { Users, PiggyBank, Award, Calendar } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function StatsCTASection() {
   const stats = [
@@ -20,12 +20,19 @@ export default function StatsCTASection() {
     },
   ]
 
+  const scrollToConsultation = () => {
+    const consultationSection = document.getElementById("consulta")
+    if (consultationSection) {
+      consultationSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
             <span className="text-[#225DF6]">GCM</span> en números
           </h2>
         </div>
@@ -56,17 +63,19 @@ export default function StatsCTASection() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
 
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Reserva una cita GRATIS ahora</h3>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+              Reserva una cita GRATIS ahora
+            </h3>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
               Agenda una consultoría fiscal 1a1 de manera gratuita (valorada en 300€)
             </p>
-            <Link
-              href="#consulta"
-              className="inline-flex items-center gap-2 bg-white text-[#225DF6] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              <Calendar className="h-5 w-5" />
-              Agendar ahora
-            </Link>
+            <Button
+                onClick={scrollToConsultation}
+                className="bg-white text-[#225DF6] hover:bg-gray-100 px-10 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 uppercase font-semibold tracking-wide"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                Agendar Asesoría Gratuita
+              </Button>
           </div>
         </div>
       </div>
