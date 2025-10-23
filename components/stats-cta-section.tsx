@@ -1,3 +1,5 @@
+"use client"
+
 import { Users, PiggyBank, Award, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -57,7 +59,10 @@ export default function StatsCTASection() {
         </div>
 
         {/* CTA Card */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#225DF6] to-[#1e52d9] p-12 text-center shadow-2xl">
+        <div
+          data-cta-section="stats"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#225DF6] to-[#1e52d9] p-8 md:p-12 text-center shadow-2xl"
+        >
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
@@ -66,16 +71,16 @@ export default function StatsCTASection() {
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Reserva una cita GRATIS ahora
             </h3>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white/90 text-base md:text-lg mb-8 max-w-2xl mx-auto">
               Agenda una consultoría fiscal 1a1 de manera gratuita (valorada en 300€)
             </p>
             <Button
-                onClick={scrollToConsultation}
-                className="bg-white text-[#225DF6] hover:bg-gray-100 px-10 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 uppercase font-semibold tracking-wide"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Agendar Asesoría Gratuita
-              </Button>
+              onClick={scrollToConsultation}
+              className="bg-white text-[#225DF6] hover:bg-gray-100 px-6 md:px-10 py-4 md:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 uppercase font-semibold tracking-wide"
+            >
+              <Calendar className="mr-2 h-4 md:h-5 w-4 md:w-5" />
+              Agendar Asesoría Gratuita
+            </Button>
           </div>
         </div>
       </div>

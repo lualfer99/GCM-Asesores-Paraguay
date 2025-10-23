@@ -18,14 +18,50 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
   const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const router = useRouter()
+  const [shouldBounce, setShouldBounce] = useState(false)
+  const [showFloatingCTA, setShowFloatingCTA] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
+
+      if (mode === "landing") {
+        const ctaSections = [
+          document.getElementById("consulta"),
+          document.querySelector('[data-cta-section="stats"]'),
+          document.querySelector('[data-cta-section="hero"]'),
+        ]
+
+        let shouldHide = false
+        ctaSections.forEach((section) => {
+          if (section) {
+            const rect = section.getBoundingClientRect()
+            const windowHeight = window.innerHeight
+            if (rect.top < windowHeight - 100 && rect.bottom > 100) {
+              shouldHide = true
+            }
+          }
+        })
+
+        setShowFloatingCTA(!shouldHide)
+      }
     }
+
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [mode])
+
+  useEffect(() => {
+    if (mode === "landing") {
+      const bounceInterval = setInterval(() => {
+        setShouldBounce(true)
+        setTimeout(() => setShouldBounce(false), 1000)
+      }, 10000)
+
+      return () => clearInterval(bounceInterval)
+    }
+  }, [mode])
 
   const navItems = [
     { name: "Inicio", href: "/" },
@@ -63,15 +99,13 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
               : "bg-gradient-to-r from-gray-50/90 via-white/90 to-blue-50/90 backdrop-blur-sm border-b border-gray-100"
           }`}
         >
-          {/* Background decoration matching hero */}
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           <div className="absolute top-0 right-10 w-32 h-32 bg-blue-600/5 rounded-full blur-2xl"></div>
           <div className="absolute top-0 left-10 w-40 h-40 bg-blue-600/3 rounded-full blur-2xl"></div>
 
           <div className="container mx-auto px-4 lg:px-6 relative">
             <div className="flex items-center justify-between h-20">
-              {/* Logo - proportional size */}
-              <Link href="/" className="flex items-center transition-transform hover:scale-105">
+              <Link href="/" className="flex items-center transition-transform hover:scale-105 mx-auto md:mx-0">
                 <OptimizedImage
                   src="/images/logo-blue.png"
                   alt="GCMAsesores Logo"
@@ -82,30 +116,32 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
                 />
               </Link>
 
-              {/* Desktop CTA - positioned right */}
               <div className="hidden md:flex items-center">
                 <Button
                   size="lg"
-                  className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl shadow-lg border border-white/20"
+                  className="btn-primary text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-5 text-white font-bold rounded-2xl shadow-lg border border-white/20 whitespace-nowrap"
                   onClick={() => handleNavClick("#consulta")}
                 >
-                  <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
-                  AGENDAR ASESORÍA GRATUITA
+                  <Calendar className="w-4 lg:w-5 h-4 lg:h-5 mr-2" />
+                  Agendar Asesoría Gratuita
                 </Button>
               </div>
             </div>
           </div>
         </header>
 
-        {/* Mobile Floating CTA */}
-        <div className="md:hidden fixed bottom-6 left-4 right-4 z-50">
+        <div
+          className={`md:hidden fixed bottom-6 left-4 right-4 z-50 transition-all duration-500 ease-in-out ${
+            showFloatingCTA ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 pointer-events-none"
+          } ${shouldBounce ? "animate-bounce" : ""}`}
+        >
           <Button
             size="lg"
             className="btn-primary w-full text-base px-6 py-5 text-white font-bold rounded-2xl shadow-2xl border-2 border-white/20 backdrop-blur-sm"
             onClick={() => handleNavClick("#consulta")}
           >
             <Calendar className="w-5 h-5 mr-2" />
-            AGENDAR ASESORÍA GRATUITA
+            Agendar Asesoría Gratuita
           </Button>
         </div>
       </>
@@ -120,16 +156,13 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
           : "bg-gradient-to-r from-gray-50/90 via-white/90 to-blue-50/90 backdrop-blur-sm border-b border-gray-100"
       }`}
     >
-      {/* Background decoration matching hero */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-0 right-10 w-32 h-32 bg-blue-600/5 rounded-full blur-2xl"></div>
       <div className="absolute top-0 left-10 w-40 h-40 bg-blue-600/3 rounded-full blur-2xl"></div>
 
       <div className="container mx-auto px-4 lg:px-6 relative">
         <div className="flex items-center justify-between h-20">
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-between w-full">
-            {/* Logo */}
             <Link
               href="/"
               className="flex items-center transition-transform hover:scale-105"
@@ -145,7 +178,6 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
               />
             </Link>
 
-            {/* Desktop Navigation */}
             <nav className="flex items-center space-x-8">
               {navItems.map((item) => (
                 <button
@@ -159,7 +191,6 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
               ))}
             </nav>
 
-            {/* CTA Button - Matching Hero Style */}
             <div className="flex items-center">
               <Button
                 size="sm"
@@ -167,14 +198,12 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
                 onClick={() => handleNavClick("#consulta")}
               >
                 <Calendar className="w-5 md:w-6 h-5 md:h-6" />
-                AGENDAR ASESORÍA GRATUITA
+                Agendar Asesoría Gratuita
               </Button>
             </div>
           </div>
 
-          {/* Mobile Navigation - Three Column Layout */}
           <div className="flex lg:hidden items-center justify-between w-full">
-            {/* Left: Hamburger Menu */}
             <div className="flex items-center">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
@@ -190,7 +219,6 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
                   side="left"
                   className="w-[320px] sm:w-[400px] bg-gradient-to-br from-gray-50 via-white to-blue-50/30 backdrop-blur-md border-r border-gray-200"
                 >
-                  {/* Background decoration in mobile menu */}
                   <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
                   <div className="absolute top-10 right-5 w-20 h-20 bg-blue-600/5 rounded-full blur-xl"></div>
 
@@ -210,14 +238,13 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
                       onClick={() => handleNavClick("#consulta")}
                     >
                       <Calendar className="w-5 h-5 mr-2" />
-                      AGENDAR ASESORÍA
+                      Agendar Asesoría
                     </Button>
                   </nav>
                 </SheetContent>
               </Sheet>
             </div>
 
-            {/* Center: Logo */}
             <div className="flex items-center justify-center flex-1">
               <Link
                 href="/"
@@ -235,7 +262,6 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
               </Link>
             </div>
 
-            {/* Right: CTA Button - Matching Hero Style */}
             <div className="flex items-center">
               <Button
                 size="sm"
@@ -243,7 +269,7 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
                 onClick={() => handleNavClick("#consulta")}
               >
                 <Calendar className="w-5 md:w-6 h-5 md:h-6" />
-                ASESORÍA GRATUITA
+                Asesoría Gratuita
               </Button>
             </div>
           </div>

@@ -90,7 +90,8 @@ export default function ConsultationSection() {
     const subject = encodeURIComponent("Solicitud de Asesoría Fiscal - LLC")
     const body = encodeURIComponent(`Hola,
 
-Me gustaría agendar una asesoría fiscal gratuita para evaluar si crear una LLC en EE.UU. es adecuado para mi negocio.
+Me gustaría agendar una asesoría fiscal gratuita para evaluar si Paraguay se adapta realmente a tus
+necesidades de manera legal.
 
 Información de contacto:
 - Nombre: 
@@ -115,7 +116,7 @@ Gracias,`)
   }
 
   return (
-    <section id="consulta" className="py-10 gradient-bg relative overflow-hidden">
+    <section id="consulta" className="py-10 md:py-16 lg:py-20 gradient-bg relative overflow-hidden">
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-black/5"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -128,18 +129,17 @@ Gracias,`)
             Agenda tu Consulta
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2">
             Agenda ya tu consulta inicial gratuita
           </h2>
 
-          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
             Una reunión de 30 minutos con nuestro equipo donde analizaremos si Paraguay se adapta realmente a tus
             necesidades de manera legal.
           </p>
 
-          {/* Calendly Section */}
-          <div className="bg-white rounded-3xl p-2 md:p-4 shadow-2xl border-4 border-white/20 backdrop-blur-sm mb-8">
-            <div className="w-full overflow-hidden rounded-2xl">
+          <div className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-2xl border-2 md:border-4 border-white/20 backdrop-blur-sm mb-8">
+            <div className="w-full overflow-hidden rounded-xl md:rounded-2xl">
               {isLoading && !showFallback && (
                 <div className="flex items-center justify-center h-96 bg-gray-50 rounded-2xl">
                   <div className="text-center">

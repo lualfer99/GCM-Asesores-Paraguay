@@ -1,3 +1,5 @@
+"use client"
+
 import { Check, X, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -74,7 +76,7 @@ export default function WhyWorkWithUsSection() {
         {/* Comparison Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Sí es para ti */}
-          <div className="bg-gradient-to-br from-[#225DF6] to-[#1e52d9] rounded-2xl shadow-lg p-8 text-white transform hover:scale-105 transition-all duration-300">
+          <div className="bg-gradient-to-br from-[#225DF6] to-[#1e52d9] rounded-2xl shadow-lg p-8 text-white hover:scale-105 hover:shadow-2xl transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                 <Check className="w-6 h-6 text-white" />
@@ -92,7 +94,7 @@ export default function WhyWorkWithUsSection() {
           </div>
 
           {/* No es para ti */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 transform hover:scale-105 transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
                 <X className="w-6 h-6 text-gray-600" />
@@ -113,12 +115,12 @@ export default function WhyWorkWithUsSection() {
         {/* CTA */}
         <div className="text-center">
           <Button
-              size="lg"
-              className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl"
-              onClick={handleCTAClick}
-            >
-              <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
-              AGENDAR ASESORÍA GRATUITA
+            size="lg"
+            className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
+            onClick={handleCTAClick}
+          >
+            <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+            Agendar Asesoría Gratuita
           </Button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { HelpCircle, Plus } from "lucide-react"
+import { HelpCircle, Plus, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function FAQSection() {
@@ -255,11 +255,11 @@ export default function FAQSection() {
             </p>
             <Button
               size="md"
-              className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#225DF6]/20  uppercase transition-colors"
+              className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#225DF6]/20 transition-colors"
               onClick={handleCTAClick}
             >
               <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
-              AGENDAR ASESORÍA GRATUITA
+              Consulta Gratuita Disponible
             </Button>
           </div>
         </div>
