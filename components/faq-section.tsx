@@ -2,6 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { HelpCircle, Plus } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function FAQSection() {
   const faqs = [
@@ -195,6 +196,13 @@ export default function FAQSection() {
     },
   ]
 
+  const handleCTAClick = () => {
+    const element = document.querySelector("#consulta")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section id="faq" className="py-20 bg-gray-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -245,10 +253,14 @@ export default function FAQSection() {
             <p className="text-sm md:text-base text-gray-600 mb-6">
               Nuestros expertos están listos para resolver todas tus dudas
             </p>
-            <div className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-4 py-2 rounded-full text-sm font-semibold">
-              <HelpCircle className="w-4 h-4" />
-              Consulta gratuita disponible
-            </div>
+            <Button
+              size="md"
+              className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#225DF6]/20  uppercase transition-colors"
+              onClick={handleCTAClick}
+            >
+              <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+              AGENDAR ASESORÍA GRATUITA
+            </Button>
           </div>
         </div>
       </div>

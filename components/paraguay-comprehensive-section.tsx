@@ -208,7 +208,7 @@ export default function ParaguayComprehensiveSection() {
                       <div className="bg-white border-2 border-[#225DF6]/20 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:border-[#225DF6] transition-all duration-300">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
                         <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
-                        <div className="mt-6 flex items-center gap-2 text-[#225DF6] font-semibold">
+                        <div className="mt-6 inline-flex items-center gap-2 bg-gray-100 text-[#225DF6] font-semibold px-4 py-2 rounded-lg">
                           <CheckCircle2 className="w-5 h-5" />
                           <span>Paso {step.number} completado</span>
                         </div>
