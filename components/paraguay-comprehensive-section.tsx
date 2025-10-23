@@ -137,22 +137,22 @@ export default function ParaguayComprehensiveSection() {
         <div className="container mx-auto px-4 lg:px-6 relative">
           {/* Header */}
           <div className="max-w-5xl mx-auto mb-16 fade-on-scroll opacity-0">
-            <div className="flex flex-col lg:flex-row lg:items-end lg:items-between gap-8">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
               <div className="flex-1">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Todo lo que incluye nuestra <span className="text-[#225DF6]">gestión integral en Paraguay</span>
                 </h2>
               </div>
               <div className="lg:max-w-md">
-                <p className="text-gray-600 leading-relaxed mb-6 text-base">
+                <p className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">
                   Te acompañamos en cada etapa del proceso, desde la planificación fiscal hasta tu residencia fiscal
                   activa, como el acompañamiento a posteriori para asegurar tu estructura en el largo plazo.
                 </p>
                 <Button
                   onClick={scrollToConsultation}
-                  className="bg-[#225DF6] hover:bg-[#1e52d9] text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 uppercase font-semibold tracking-wide w-full lg:w-auto hover:scale-105"
+                  className="bg-[#225DF6] hover:bg-[#1e52d9] text-white px-6 md:px-8 py-4 md:py-5 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full lg:w-auto hover:scale-105"
                 >
-                  <Calendar className="mr-2 h-5 w-5" />
+                  <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
                   Agendar Asesoría Gratuita
                 </Button>
               </div>
@@ -201,10 +201,10 @@ export default function ParaguayComprehensiveSection() {
             <div className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-6 py-3 rounded-full text-sm font-semibold mb-6 uppercase tracking-wide">
               Nuestro Proceso
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
               4 Pasos para obtener tu <span className="text-[#225DF6]">residencia fiscal en Paraguay</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Simplificamos al máximo el proceso y gestionamos todo con nuestro equipo de abogados en Paraguay y en
               España.
             </p>
@@ -258,7 +258,7 @@ export default function ParaguayComprehensiveSection() {
                     {/* Text Card */}
                     <div className="flex-1 w-full">
                       <div className="bg-white border-2 border-[#225DF6]/20 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl hover:border-[#225DF6] transition-all duration-300 hover:-translate-y-1">
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 break-words">
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 md:mb-4 break-words">
                           {step.title}
                         </h3>
                         <p className="text-gray-600 leading-relaxed text-base md:text-lg break-words">
@@ -279,12 +279,19 @@ export default function ParaguayComprehensiveSection() {
           {/* Final CTA */}
           <div className="text-center mt-20 fade-on-scroll opacity-0 px-4">
             <div className="w-full md:inline-block bg-gradient-to-br from-[#225DF6] to-[#1e52d9] rounded-2xl md:rounded-3xl p-6 md:p-12 shadow-2xl hover:scale-105 transition-transform duration-300">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4 break-words">
-                ¿Listo para dar el siguiente paso?
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 break-words">
+                ¿Listo para Dar el Siguiente Paso?
               </h3>
-              <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto break-words leading-relaxed">
+              <p className="text-white/90 text-base md:text-lg mb-8 max-w-2xl mx-auto break-words leading-relaxed">
                 Agenda una sesión estratégica gratuita y descubre cómo Paraguay puede transformar tu situación fiscal.
               </p>
+              <Button
+                onClick={scrollToConsultation}
+                className="bg-white text-[#225DF6] hover:bg-gray-100 px-6 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full sm:w-auto max-w-full"
+              >
+                <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
+                <span className="break-words">Agendar Asesoría Gratuita</span>
+              </Button>
             </div>
           </div>
         </div>

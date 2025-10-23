@@ -42,14 +42,14 @@ export default function HeroSection() {
             100% Legal y Seguro
           </div>
 
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Optimiza tu fiscalidad desde <span className="text-blue-600 relative">Paraguay</span> de forma{" "}
             <span className="text-blue-600 relative">100% legal</span>
           </h1>
 
           <h2 className="text-lg md:text-xl lg:text-2xl text-blue-600 font-bold mb-6">Si vendes servicios digitales</h2>
 
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed">
             En GCM, hemos ayudado a cientos de empresarios digitales como tú a{" "}
             <span className="text-blue-600 font-semibold">optimizar su fiscalidad</span> de manera segura y legal.
           </p>

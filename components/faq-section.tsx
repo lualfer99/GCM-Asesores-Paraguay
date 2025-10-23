@@ -214,7 +214,7 @@ export default function FAQSection() {
             <HelpCircle className="w-4 h-4" />
             FAQ
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Preguntas <span className="text-[#225DF6]">frecuentes</span>
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
@@ -249,16 +249,16 @@ export default function FAQSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-[#225DF6]/10 to-[#1e52d9]/10 rounded-3xl p-8 border border-[#225DF6]/20 max-w-2xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">¿Tienes más preguntas?</h3>
-            <p className="text-sm md:text-base text-gray-600 mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">¿Tienes más preguntas?</h3>
+            <p className="text-base md:text-lg text-gray-600 mb-6">
               Nuestros expertos están listos para resolver todas tus dudas
             </p>
             <Button
               size="md"
-              className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#225DF6]/20 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-6 py-3 rounded-lg text-base font-semibold hover:bg-[#225DF6]/20 transition-colors"
               onClick={handleCTAClick}
             >
-              <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+              <Calendar className="w-5 h-5 flex-shrink-0" />
               Consulta Gratuita Disponible
             </Button>
           </div>
