@@ -100,8 +100,8 @@ export default function HomePage() {
         <TeamHeroCarousel />
         <ParaguayComprehensiveSection />
         <ConsultationSection />
-        <StatsCTASection />
         <FAQSection />
+        <StatsCTASection />
       </main>
       <OptimizedFooter />
     </div>
