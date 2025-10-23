@@ -68,38 +68,6 @@ export default function FAQSection() {
       ),
     },
     {
-      question: "¿Puedo obtener un certificado oficial de residencia fiscal?",
-      answer: (
-        <>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Sí. Una vez cumplas cualquiera de los requisitos legales (120 días de permanencia o RUC activo), el gobierno
-            paraguayo emite un <strong>Certificado de Residencia Fiscal anual</strong>.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Este documento es clave para acreditar ante otros países o bancos tu estatus fiscal paraguayo y evitar la
-            doble tributación.
-          </p>
-        </>
-      ),
-    },
-    {
-      question: "¿España (u otro país de origen) podría reclamarme impuestos?",
-      answer: (
-        <>
-          <p className="text-gray-700 leading-relaxed mb-4">No necesariamente.</p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Mientras cumplas con las normas de residencia fiscal y cuentes con tu certificado paraguayo vigente, ningún
-            país puede gravar tus rentas extranjeras si ya no eres residente fiscal allí.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            En casos como España, analizamos tu situación concreta y aplicamos los convenios de doble imposición para
-            evitar conflictos o sanciones. Nuestro equipo legal te guía paso a paso para que el cambio sea seguro y
-            defendible.
-          </p>
-        </>
-      ),
-    },
-    {
       question: "¿Con cuánta frecuencia tengo que viajar a Paraguay para mantener la residencia?",
       answer: (
         <>
@@ -118,21 +86,110 @@ export default function FAQSection() {
       ),
     },
     {
-      question: "¿Qué ocurre después de obtener la residencia y el RUC?",
+      question: "¿Para qué sirve el Certificado de Residencia Fiscal?",
       answer: (
         <>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Una vez que tu residencia y tu RUC están activos, GCM te ofrece un{" "}
-            <strong>servicio anual de mantenimiento y cumplimiento</strong>, donde nos encargamos de:
+            El <strong>Certificado de Residencia Fiscal</strong> es el documento oficial emitido por la Administración
+            Tributaria de Paraguay que <strong>acredita que tu residencia fiscal se encuentra en ese país</strong>.
           </p>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>Mantener tu residencia al día ante las autoridades paraguayas.</li>
-            <li>Asesorarte en tus declaraciones locales (si aplican).</li>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            De cara a España (u otros países de origen), este certificado es <strong>fundamental</strong>:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
             <li>
-              Revisar cada año tu estructura internacional para asegurar que sigues optimizando tu carga fiscal dentro
-              del marco legal.
+              Te permite <strong>demostrar ante Hacienda</strong> que tributas fuera de España, y por tanto,{" "}
+              <strong>no estás obligado a declarar tus rentas mundiales allí</strong>.
+            </li>
+            <li>
+              Sirve como <strong>prueba legal</strong> frente a bancos, plataformas y organismos internacionales que
+              soliciten acreditar tu residencia fiscal efectiva.
             </li>
           </ul>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Sin este documento, España podría seguir considerándote residente fiscal español y exigirte tributar por
+            todos tus ingresos globales.
+          </p>
+        </>
+      ),
+    },
+    {
+      question: "¿Qué es el RUC?",
+      answer: (
+        <>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            El <strong>RUC (Registro Único de Contribuyentes)</strong> es el <strong>número fiscal paraguayo</strong>,
+            equivalente al NIF español.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Es indispensable para operar legalmente en Paraguay, abrir cuentas bancarias, emitir facturas o declarar
+            impuestos (aunque tus ingresos del extranjero tributen al 0 %).
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            En otras palabras, el RUC <strong>es la base para tener una residencia fiscal activa y reconocida</strong>,
+            y forma parte de la estructura que GCM te ayuda a mantener al día.
+          </p>
+        </>
+      ),
+    },
+    {
+      question: "¿Me sirve Paraguay si tengo una LLC?",
+      answer: (
+        <>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Sí, y de hecho <strong>es una combinación muy favorable</strong>.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Si ya operas con una <strong>LLC en Estados Unidos</strong>, obtener la residencia fiscal en Paraguay te
+            permite:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
+            <li>
+              Consolidar una estructura <strong>totalmente fuera de España</strong>, reduciendo al mínimo tus nexos
+              fiscales.
+            </li>
+            <li>
+              Aprovechar el <strong>sistema territorial paraguayo</strong>, donde los ingresos desde la LLC{" "}
+              <strong>no tributan en Paraguay</strong>.
+            </li>
+            <li>
+              Contar con una <strong>residencia fiscal reconocida internacionalmente</strong>, que refuerza la
+              legitimidad de tu estructura ante bancos, plataformas y organismos internacionales.
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed">
+            En conjunto, Paraguay y una LLC forman una de las estrategias más seguras y eficientes para negocios
+            digitales internacionales.
+          </p>
+        </>
+      ),
+    },
+    {
+      question: "¿Por qué el Convenio de Doble Imposición con España puede ser peligroso?",
+      answer: (
+        <>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            El <strong>Convenio de Doble Imposición (CDI)</strong> entre España y Paraguay se creó para evitar que{" "}
+            <strong>una misma renta tribute dos veces</strong>, pero <strong>puede volverse en tu contra</strong>.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Paraguay aplica un sistema de <strong>tributación territorial</strong>, lo que significa que{" "}
+            <strong>solo grava los ingresos generados dentro del país</strong>.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Sin embargo, España <strong>tributa por renta mundial</strong>, y si Hacienda considera que{" "}
+            <strong>sigues manteniendo vínculos personales o económicos con España</strong>, puede intentar reclamar la
+            tributación de tus ingresos extranjeros <strong>pese a tu residencia en Paraguay</strong>.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            👉 La clave está en <strong>estructurar correctamente tu cambio de residencia</strong>, asegurando que tu{" "}
+            <strong>operativa, residencia y vínculos fiscales estén alineados</strong> con el sistema territorial
+            paraguayo y no con el español.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            En GCM diseñamos un <strong>protocolo de actuación personalizado</strong> precisamente para evitar que
+            España pueda reclamar tus ingresos internacionales.
+          </p>
         </>
       ),
     },
@@ -149,9 +206,11 @@ export default function FAQSection() {
             <HelpCircle className="w-4 h-4" />
             FAQ
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#225DF6] mb-6">Preguntas frecuentes</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Resolvemos todas tus dudas sobre la creación de LLCs y la residencia fiscal en Paraguay
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Preguntas <span className="text-[#225DF6]">frecuentes</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+            Información básica para que puedas comprender mejor la residencia fiscal en Paraguay
           </p>
         </div>
 
@@ -163,7 +222,7 @@ export default function FAQSection() {
                 value={`item-${index}`}
                 className="card-modern border-2 border-gray-100 hover:border-[#225DF6]/30 transition-all duration-300"
               >
-                <AccordionTrigger className="px-8 py-6 text-left font-bold text-gray-900 hover:no-underline hover:text-[#225DF6] transition-colors text-lg group">
+                <AccordionTrigger className="px-8 py-6 text-left font-bold text-gray-900 hover:no-underline hover:text-[#225DF6] transition-colors text-base md:text-lg group">
                   <div className="flex items-center gap-4">
                     <div className="w-8 h-8 bg-[#225DF6]/10 rounded-full flex items-center justify-center group-hover:bg-[#225DF6] transition-colors">
                       <Plus className="w-4 h-4 text-[#225DF6] group-hover:text-white transition-colors" />
@@ -171,7 +230,7 @@ export default function FAQSection() {
                     <span>{faq.question}</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-gray-600 leading-relaxed text-lg border-t border-gray-100 pt-6">
+                <AccordionContent className="px-8 pb-6 text-sm md:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -182,8 +241,10 @@ export default function FAQSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-[#225DF6]/10 to-[#1e52d9]/10 rounded-3xl p-8 border border-[#225DF6]/20 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Tienes más preguntas?</h3>
-            <p className="text-gray-600 mb-6">Nuestros expertos están listos para resolver todas tus dudas</p>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">¿Tienes más preguntas?</h3>
+            <p className="text-sm md:text-base text-gray-600 mb-6">
+              Nuestros expertos están listos para resolver todas tus dudas
+            </p>
             <div className="inline-flex items-center gap-2 bg-[#225DF6]/10 text-[#225DF6] px-4 py-2 rounded-full text-sm font-semibold">
               <HelpCircle className="w-4 h-4" />
               Consulta gratuita disponible

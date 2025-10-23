@@ -128,11 +128,13 @@ Gracias,`)
             Agenda tu Consulta
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">Agenda ya tu asesoría</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+            Agenda ya tu consulta inicial gratuita
+          </h2>
 
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Una reunión de 30 minutos con un asesor fiscal experto donde verás si la LLC se puede aplicar a tu empresa
-            de manera segura
+            Una reunión de 30 minutos con nuestro equipo donde analizaremos si Paraguay se adapta realmente a tus
+            necesidades de manera legal.
           </p>
 
           {/* Calendly Section */}
@@ -149,12 +151,7 @@ Gracias,`)
               )}
 
               {!showFallback && (
-                <iframe
-                  src={finalCalendlyUrl}
-                  width="100%"
-                  height="800"
-                  frameBorder="0"
-                />
+                <iframe src={finalCalendlyUrl} width="100%" height="800" frameBorder="0" />
                 /**<div
                   className="calendly-inline-widget"
                   data-url={finalCalendlyUrl}

@@ -118,7 +118,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4 lg:px-6 relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Todo lo que incluye nuestro servicio</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
             Servicio completo para la creación y gestión de tu LLC
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function ServicesSection() {
                   <IconComponent className={`h-5 w-5 ${isSpecialService ? service.iconColor : "text-green-600"}`} />
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm border-2 border-white/50 hover:shadow-modern hover:border-blue-200/50 transition-all duration-300 flex-1">
-                  <p className="text-gray-700 leading-relaxed font-medium">{service.text}</p>
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">{service.text}</p>
                 </div>
               </div>
             )
@@ -147,10 +147,10 @@ export default function ServicesSection() {
             <Zap className="w-4 h-4" />
             Garantía de Resultados
           </div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
             ¡Empieza a facturar en menos de <span className="text-[#225DF6]">10 días</span>!
           </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Tendremos listos todos los papeles en menos de 10 días, para que puedas empezar a recibir pagos de tus
             clientes.
           </p>

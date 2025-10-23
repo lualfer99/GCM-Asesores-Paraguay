@@ -43,9 +43,11 @@ export default function ProcessSection() {
             <Rocket className="w-4 h-4" />
             Nuestro Proceso
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#225DF6] mb-6">NUESTRO PROCESO DE TRABAJO</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            nuestro proceso de <span className="text-[#225DF6]">trabajo</span>
+          </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#225DF6] to-[#1e52d9] mx-auto mb-8 rounded-full"></div>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Crear una LLC requiere de conocimiento especializado en tributación internacional, estaremos contigo en cada
             parte del proceso para asegurarnos de tu éxito.
           </p>
@@ -81,13 +83,13 @@ export default function ProcessSection() {
                       >
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#225DF6] mb-2">{step.title}</h3>
-                      <p className="text-lg font-semibold text-gray-900 mb-6 bg-highlight inline-block px-4 py-2 rounded-lg">
+                      <h3 className="text-xl md:text-2xl font-bold text-[#225DF6] mb-2">{step.title}</h3>
+                      <p className="text-base md:text-lg font-semibold text-gray-900 mb-6 bg-highlight inline-block px-4 py-2 rounded-lg">
                         {step.subtitle}
                       </p>
                     </div>
                     <div className="border-b-2 border-gray-200 mb-6 group-hover:border-[#225DF6]/30 transition-colors"></div>
-                    <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               </div>
@@ -98,16 +100,16 @@ export default function ProcessSection() {
         {/* Bottom stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold text-[#225DF6] mb-2">10 días</div>
-            <div className="text-gray-600">Tiempo de entrega</div>
+            <div className="text-3xl md:text-4xl font-bold text-[#225DF6] mb-2">10 días</div>
+            <div className="text-sm md:text-base text-gray-600">Tiempo de entrega</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-[#225DF6] mb-2">100%</div>
-            <div className="text-gray-600">Tasa de éxito</div>
+            <div className="text-3xl md:text-4xl font-bold text-[#225DF6] mb-2">100%</div>
+            <div className="text-sm md:text-base text-gray-600">Tasa de éxito</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-[#225DF6] mb-2">24/7</div>
-            <div className="text-gray-600">Soporte disponible</div>
+            <div className="text-3xl md:text-4xl font-bold text-[#225DF6] mb-2">24/7</div>
+            <div className="text-sm md:text-base text-gray-600">Soporte disponible</div>
           </div>
         </div>
       </div>

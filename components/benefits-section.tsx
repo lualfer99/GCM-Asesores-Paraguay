@@ -57,10 +57,10 @@ export default function BenefitsSection() {
             <Zap className="w-4 h-4" />
             Nuestras ventajas
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            ¿PORQUÉ <span className="text-[#225DF6]">PARAGUAY</span>?
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            ¿Por qué <span className="text-[#225DF6]">Paraguay</span>?
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Siendo uno de los países con mejores condiciones fiscales de todo el mundo, si eres nómada digital podrás
             disfrutar de todas estas ventajas.
           </p>
@@ -82,10 +82,10 @@ export default function BenefitsSection() {
                     {benefit.highlight}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#225DF6] transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 group-hover:text-[#225DF6] transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{benefit.description}</p>
               </div>
             )
           })}

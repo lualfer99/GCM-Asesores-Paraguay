@@ -6,16 +6,16 @@ export default function StatsCTASection() {
     {
       icon: Users,
       number: "+1000",
-      label: "Clientes activos",
+      label: "Clientes activos entre todos nuestros servicios",
     },
     {
       icon: PiggyBank,
-      number: "+10M €",
+      number: "+20M €",
       label: "Ahorrados en impuestos para nuestros clientes",
     },
     {
       icon: Award,
-      number: "+20",
+      number: "+15",
       label: "Expertos en fiscalidad en el equipo",
     },
   ]
@@ -25,7 +25,9 @@ export default function StatsCTASection() {
       <div className="container mx-auto px-4 lg:px-6">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">GCM en números</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <span className="text-[#225DF6]">GCM</span> en números
+          </h2>
         </div>
 
         {/* Stats Cards */}

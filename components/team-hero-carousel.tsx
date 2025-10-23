@@ -39,9 +39,7 @@ export function TeamHeroCarousel() {
   return (
     <section className="w-full pt-20 px-4 lg:px-20">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
-          ¿Quiénes somos?
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">¿Quiénes somos?</h2>
 
         <div className="relative mt-20 mb-16">
           {/* Floating Quote Icon - positioned exactly as in reference */}
@@ -53,9 +51,9 @@ export function TeamHeroCarousel() {
             <div className="lg:w-3/5 py-10 lg:p-16 relative">
               <div className="pt-8 space-y-6 px-4">
                 <p className="text-gray-800 leading-relaxed text-md">
-                  Somos un <span className="font-bold">despacho especializado en fiscalidad internacional</span> para{" "}
-                  <span className="font-bold">negocios digitales</span>, contamos con un{" "}
-                  <span className="font-bold">equipo de más de 20 profesionales</span> dispuestos a dar{" "}
+                  Somos un <span className="font-bold">despacho especializado en fiscalidad internacional</span>{" "}
+                  enfocado en <span className="font-bold">negocios digitales</span>, contamos con un{" "}
+                  <span className="font-bold">equipo de más de 15 profesionales</span> dispuestos a dar{" "}
                   <span className="font-bold">lo mejor de sí</span> para optimizar tus impuestos de manera segura.
                 </p>
 
@@ -67,7 +65,7 @@ export function TeamHeroCarousel() {
                   <span className="font-bold">experiencia de calidad</span> a cada cliente, adentrándonos en los
                   aspectos más relevantes tanto a{" "}
                   <span className="font-bold">nivel empresarial como a nivel personal</span>, asegurando así cubrir
-                  todas tus necesidades.
+                  todas tus necesidades de manera segura y legal.
                 </p>
               </div>
             </div>

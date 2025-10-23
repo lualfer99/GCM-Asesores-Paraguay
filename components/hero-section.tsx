@@ -40,16 +40,14 @@ export default function HeroSection() {
             100% Legal y Seguro
           </div>
 
-          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            OPTIMIZA TU FISCALIDAD DESDE <span className="text-blue-600 relative">PARAGUAY</span> DE FORMA{" "}
-            <span className="text-blue-600 relative">100% LEGAL</span>
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Optimiza tu fiscalidad desde <span className="text-blue-600 relative">Paraguay</span> de forma{" "}
+            <span className="text-blue-600 relative">100% legal</span>
           </h1>
 
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-blue-600 font-bold mb-8">
-            Si vendes servicios digitales
-          </h2>
+          <h2 className="text-lg md:text-xl lg:text-2xl text-blue-600 font-bold mb-6">Si vendes servicios digitales</h2>
 
-          <p className="text-md md:text-xl lg:text-xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed">
             En GCM, hemos ayudado a cientos de empresarios digitales como tú a{" "}
             <span className="text-blue-600 font-semibold">optimizar su fiscalidad</span> de manera segura y legal.
           </p>
@@ -75,15 +73,15 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4 mb-8 justify-center">
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-100">
               <Zap className="w-4 h-4 text-green-500" />
-              <span className="font-medium text-gray-700 text-sm">Proceso ágil</span>
+              <span className="font-medium text-gray-700 text-xs md:text-sm">Proceso ágil</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-100">
               <TrendingUp className="w-4 h-4 text-green-500" />
-              <span className="font-medium text-gray-700 text-sm">0% de impuestos en Paraguay</span>
+              <span className="font-medium text-gray-700 text-xs md:text-sm">0% de impuestos en Paraguay</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-100">
               <Shield className="w-4 h-4 text-green-500" />
-              <span className="font-medium text-gray-700 text-sm">1 día al año</span>
+              <span className="font-medium text-gray-700 text-xs md:text-sm">1 día al año</span>
             </div>
           </div>
 

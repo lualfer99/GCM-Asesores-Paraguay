@@ -1,42 +1,59 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { FileCheck, Building2, FileText, MessageSquare, CheckCircle2, Calendar } from "lucide-react"
+import { FileCheck, Building2, CheckCircle2, Calendar, ClipboardList, Home, Calculator, Plane } from "lucide-react"
 
 export default function ParaguayComprehensiveSection() {
   const includedServices = [
     {
       number: "01",
-      icon: MessageSquare,
-      title: "Diagnóstico y planificación fiscal",
-      description: "Breve análisis personalizado de tu situación, objetivos y conveniencia de Paraguay.",
+      icon: ClipboardList,
+      title: "Planificación fiscal y protocolo de actuación",
+      description:
+        "Estudio personalizado de tu situación y objetivos, nos ponemos en el lugar de Hacienda para blindar la operativa y corregir los puntos de conexión con España.",
     },
     {
       number: "02",
       icon: FileCheck,
       title: "Obtención de residencia",
-      description: "Coordinamos y gestionamos toda la documentación necesaria para tu residencia legal.",
+      description:
+        "Coordinamos y gestionamos toda la documentación necesaria para tu residencia legal, cédula de identidad, RUC, certificado de residencia fiscal, modelo 030 en España...",
     },
     {
       number: "03",
       icon: Building2,
-      title: "Apertura bancaria internacional",
-      description: "Asistencia completa para abrir cuenta en USD o EUR, cumpliendo todos los requisitos.",
+      title: "Apertura de cuenta bancaria sin CRS",
+      description:
+        "Asistencia completa para abrir cuentas sin CRS y planificación de todo el flujo bancario de tu estructura.",
     },
     {
       number: "04",
-      icon: FileText,
-      title: "Registro RUC y mantenimiento",
-      description: "Tramitamos tu número fiscal y te guiamos en la conservación de la residencia año a año.",
+      icon: Home,
+      title: "Sustancia en Paraguay",
+      description:
+        "Te aportamos un contrato de alquiler en Paraguay y documentación para blindar tu residencia fiscal.",
+    },
+    {
+      number: "05",
+      icon: Calculator,
+      title: "Contabilidad anual",
+      description: "Hacemos tu contabilidad mensual y anual para mantener tu RUC activo y tu residencia fiscal.",
+    },
+    {
+      number: "06",
+      icon: Plane,
+      title: "Transfer privado",
+      description:
+        "Te recogeremos en el Aeropuerto con nuestro transfer privado y te llevaremos siempre para hacer todas las gestiones y procesos necesarios.",
     },
   ]
 
   const processSteps = [
     {
       number: "01",
-      title: "Sesión estratégica inicial",
+      title: "Planificación fiscal estratégica",
       description:
-        "Hablamos contigo para conocer tu caso, diseñar tu estrategia fiscal y presentarte un plan detallado con tiempos y pasos.",
+        "Nos reunimos contigo para conocer tu caso, diseñar tu estrategia fiscal y presentarte un plan detallado con tiempos y pasos.",
       image: "/business-meeting-strategy.png",
     },
     {
@@ -44,20 +61,22 @@ export default function ParaguayComprehensiveSection() {
       title: "Viaje express a Asunción",
       description:
         "Te recibimos en el aeropuerto y gestionamos contigo los trámites presenciales (Inmigración, Ministerio del Interior, Policía, etc.). Todo en tres días.",
-      image: "/airport-arrival-welcome.jpg",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Airport-transfers-for-VIP-1-of-1-wHlZsWfLZ698SvjEKYGssgnTdEONw6.webp",
     },
     {
       number: "03",
-      title: "Activación y seguimiento",
+      title: "Residencia y RUC activos",
       description:
-        "Mientras obtienes la residencia, nuestro equipo local mantiene activo tu expediente y gestiona las etapas administrativas sin que tengas que intervenir.",
-      image: "/document-processing-office.jpg",
+        "Una vez completado el proceso, en un viaje de 1 día, registraremos tu RUC, te ayudaremos a abrir tus cuentas bancarias y mantener tu estatus fiscal operativo. A partir de aquí, GCM sigue contigo para el mantenimiento anual.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/International_Banks_in_UAE-kKvxM7zMcJvTJlVLF9bTQ2s3i8InGM.webp",
     },
     {
       number: "04",
-      title: "Residencia y RUC activos",
+      title: "Baja fiscal de España",
       description:
-        "Una vez completado el proceso, te ayudamos a registrar tu RUC, abrir tu cuenta y mantener tu estatus fiscal operativo. A partir de aquí, GCM sigue contigo para el mantenimiento anual.",
+        "Una vez ya esté la residencia activa, haremos el modelo 030 en España para dar de baja tu residencia fiscal y eliminar tus obligaciones tributarias.",
       image: "/success-celebration-business.jpg",
     },
   ]
@@ -83,9 +102,9 @@ export default function ParaguayComprehensiveSection() {
                 </h2>
               </div>
               <div className="lg:max-w-md">
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Te acompañamos en cada etapa del proceso: desde la planificación fiscal hasta tu residencia activa,
-                  asegurando que todo sea claro, legal y sin contratiempos.
+                <p className="text-gray-600 leading-relaxed mb-6 text-base">
+                  Te acompañamos en cada etapa del proceso, desde la planificación fiscal hasta tu residencia fiscal
+                  activa, como el acompañamiento a posteriori para asegurar tu estructura en el largo plazo.
                 </p>
                 <Button
                   onClick={scrollToConsultation}
@@ -99,7 +118,7 @@ export default function ParaguayComprehensiveSection() {
           </div>
 
           {/* Service Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {includedServices.map((service, index) => {
               const IconComponent = service.icon
               return (
@@ -140,12 +159,11 @@ export default function ParaguayComprehensiveSection() {
               Nuestro Proceso
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
-              Cuatro pasos para optimizar tu carga fiscal y obtener tu{" "}
-              <span className="text-[#225DF6]">residencia en Paraguay</span>
+              4 Pasos para obtener tu <span className="text-[#225DF6]">residencia fiscal en Paraguay</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Lo simplificamos al máximo: sin papeleo confuso, sin riesgos, y con un equipo local que te acompaña
-              personalmente.
+              Simplificamos al máximo el proceso y gestionamos todo con nuestro equipo de abogados en Paraguay y en
+              España.
             </p>
           </div>
 

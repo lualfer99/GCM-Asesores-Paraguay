@@ -5,14 +5,12 @@ import TrustpilotTestimonialsSection from "@/components/trustpilot-testimonials-
 import ParaguayComprehensiveSection from "@/components/paraguay-comprehensive-section"
 import WhyWorkWithUsSection from "@/components/why-work-with-us-section"
 import BenefitsSection from "@/components/benefits-section"
-import ServicesSection from "@/components/services-section"
-import ProcessSection from "@/components/process-section"
 import FAQSection from "@/components/faq-section"
 import { TeamHeroCarousel } from "@/components/team-hero-carousel"
 import OptimizedFooter from "@/components/optimized-footer"
 import { Poppins } from "next/font/google"
-import StatsCTASection from "@/components/stats-cta-section"
 import ConsultationSection from "@/components/consultation-section"
+import StatsCTASection from "@/components/stats-cta-section"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -101,11 +99,9 @@ export default function HomePage() {
         <WhyWorkWithUsSection />
         <TeamHeroCarousel />
         <ParaguayComprehensiveSection />
-        <ServicesSection />
-        <ProcessSection />
         <ConsultationSection />
-        <FAQSection />
         <StatsCTASection />
+        <FAQSection />
       </main>
       <OptimizedFooter />
     </div>

@@ -425,10 +425,10 @@ export default function TrustpilotTestimonialsSection() {
               </div>
             </div>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Lo que dicen nuestros <span className="text-[#225DF6]">clientes</span>
             </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
               Más de 500 emprendedores ya han optimizado su fiscalidad con nosotros (reservamos el anonimato de nuestros
               clientes para mayor seguridad fiscal)
             </p>
