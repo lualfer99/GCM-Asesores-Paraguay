@@ -3,17 +3,17 @@
 import { createContext, useContext, useState, type ReactNode } from "react"
 
 interface VideoProgressContextType {
-  hasWatched50Percent: boolean
-  setHasWatched50Percent: (value: boolean) => void
+  hasWatched90Percent: boolean
+  setHasWatched90Percent: (value: boolean) => void
 }
 
 const VideoProgressContext = createContext<VideoProgressContextType | undefined>(undefined)
 
 export function VideoProgressProvider({ children }: { children: ReactNode }) {
-  const [hasWatched50Percent, setHasWatched50Percent] = useState(false)
+  const [hasWatched90Percent, setHasWatched90Percent] = useState(false)
 
   return (
-    <VideoProgressContext.Provider value={{ hasWatched50Percent, setHasWatched50Percent }}>
+    <VideoProgressContext.Provider value={{ hasWatched90Percent, setHasWatched90Percent }}>
       {children}
     </VideoProgressContext.Provider>
   )

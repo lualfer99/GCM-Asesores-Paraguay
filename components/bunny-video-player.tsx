@@ -5,7 +5,7 @@ import { useVideoProgress } from "@/contexts/video-progress-context"
 type Props = { libraryId: string; videoId: string }
 
 export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
-  const { setHasWatched50Percent } = useVideoProgress()
+  const { setHasWatched90Percent } = useVideoProgress()
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const playerRef = useRef<any>(null)
 
@@ -17,7 +17,7 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
   const maxSeenRef = useRef(0)
   const unlockedRef = useRef(false)
 
-  const src = `https://iframe.mediadelivery.net/embed/${libraryId}/${videoId}?autoplay=true&muted=true` // sin controls si tu lib lo respeta: &controls=false
+  const src = `https://iframe.mediadelivery.net/embed/${libraryId}/${videoId}?autoplay=true&muted=true`
 
   useEffect(() => {
     let destroyed = false
@@ -42,19 +42,19 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
         player.play?.()
         player.getDuration?.((d: number) => {
           durationRef.current = d || 0
-          halfRef.current = d * 0.5
+          halfRef.current = d * 0.9
         })
         player.on("timeupdate", (e: { seconds: number; duration: number }) => {
           const t = e?.seconds || 0
           const d = e?.duration || durationRef.current || 0
           if (d && !durationRef.current) {
             durationRef.current = d
-            halfRef.current = d * 0.5
+            halfRef.current = d * 0.9
           }
           if (t > maxSeenRef.current) maxSeenRef.current = t
           if (!unlockedRef.current && durationRef.current > 0 && maxSeenRef.current >= halfRef.current) {
             unlockedRef.current = true
-            setHasWatched50Percent(true)
+            setHasWatched90Percent(true)
           }
         })
         const bounceBack = () => {
@@ -69,8 +69,10 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
       })
     })
 
-    return () => { destroyed = true }
-  }, [src, setHasWatched50Percent])
+    return () => {
+      destroyed = true
+    }
+  }, [src, setHasWatched90Percent])
 
   return (
     <div className="relative max-w-4xl mx-auto mb-12">

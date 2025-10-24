@@ -11,7 +11,7 @@ export default function ConsultationSection() {
   const [isLoading, setIsLoading] = useState(true)
   const isLoadingRef = useRef(true)
   const pathname = usePathname()
-  const { hasWatched50Percent } = useVideoProgress()
+  const { hasWatched90Percent } = useVideoProgress()
 
   // URL base de Calendly según la página
   const baseCalendlyUrl = pathname.includes("gestoria-para-llcs")
@@ -139,21 +139,19 @@ Gracias,`)
             necesidades de manera legal.
           </p>
 
-          {!hasWatched50Percent && (
+          {!hasWatched90Percent && (
             <div className="mb-8 flex items-center justify-center gap-3 bg-amber-50 border-2 border-amber-200 text-amber-800 px-6 py-4 rounded-xl text-base max-w-2xl mx-auto">
               <AlertCircle className="w-5 h-5 flex-shrink-0" />
-              <span className="font-medium">
-                Para poder agendar una llamada debes haber visto mínimo la mitad del vídeo
-              </span>
+              <span className="font-medium">Para poder agendar una llamada debes haber visto el 90% del vídeo</span>
             </div>
           )}
 
           <div
             className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-2xl border-2 md:border-4 border-white/20 backdrop-blur-sm mb-8 relative"
             style={{
-              cursor: !hasWatched50Percent ? "not-allowed" : "default",
-              pointerEvents: !hasWatched50Percent ? "none" : "auto",
-              opacity: !hasWatched50Percent ? 0.4 : 1,
+              cursor: !hasWatched90Percent ? "not-allowed" : "default",
+              pointerEvents: !hasWatched90Percent ? "none" : "auto",
+              opacity: !hasWatched90Percent ? 0.4 : 1,
               transition: "opacity 0.3s ease-in-out",
             }}
           >

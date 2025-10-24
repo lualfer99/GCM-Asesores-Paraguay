@@ -6,26 +6,26 @@ import CTAWrapper from "@/components/cta-wrapper"
 
 export default function WhyWorkWithUsSection() {
   const yesItems = [
-    "Tienes un negocio digital o internacional",
-    "Buscas optimizar tu carga fiscal de forma legal y segura",
-    "Quieres seguridad, transparencia y acompañamiento experto",
-    "Estás dispuesto a invertir en una estructura sólida",
-    "Has escuchado que en Paraguay se paga un 0% pero no estás seguro porque cada asesor dice una cosa y se contradicen",
-    "Quieres tener conocimiento y entender bien lo que estás haciendo",
+    "Tienes un negocio digital o internacional.",
+    "Buscas optimizar tu carga fiscal de forma legal y segura.",
+    "Quieres seguridad, transparencia y acompañamiento experto.",
+    "Estás dispuesto a invertir en una estructura sólida.",
+    "Has escuchado que en Paraguay se paga un 0% pero no estás seguro porque cada asesor dice una cosa y se contradicen.",
+    "Quieres tener conocimiento y entender bien lo que estás haciendo.",
   ]
 
   const noItems = [
-    "Tienes un negocio físico o local",
-    "Te conformas con la carga fiscal actual en España",
-    "Buscas atajos o esquemas dudosos",
-    "Priorizas el precio antes que la seguridad de tu operativa",
-    "Prefieres hacerlo por tu cuenta sin asesoramiento",
-    "Facturas menos de 3.000€/mes",
-    "Quieres vivir +6 meses en España",
+    "Tienes un negocio físico o local.",
+    "Te conformas con la carga fiscal actual en España.",
+    "Buscas atajos o esquemas dudosos.",
+    "Priorizas el precio antes que la seguridad de tu operativa.",
+    "Prefieres hacerlo por tu cuenta sin asesoramiento.",
+    "Facturas menos de 3.000€/mes.",
+    "Quieres vivir +6 meses en España.",
   ]
 
   const differentials = [
-    "Analizamos tu situación real antes de recomendarte Paraguay. (Nos ponemos en el lugar de Hacienda para extraer y corregir todos los puntos de conexión con España)",
+    "Analizamos tu situación real antes de recomendarte Paraguay. (Nos ponemos en el lugar de Hacienda para extraer y corregir todos los puntos de conexión con España).",
     "Solo trabajamos con estructuras 100 % legales y defendibles.",
     "Te acompañamos durante y después del proceso, no solo en el papeleo.",
     "Nos especializamos en negocios digitales e internacionales, no en soluciones genéricas.",
