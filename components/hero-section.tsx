@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Calendar, Shield, Zap, TrendingUp } from "lucide-react"
+import { Calendar, Shield, Zap, TrendingUp, Download } from "lucide-react"
 import { useEffect, useState } from "react"
 import VideoPlayer from "@/components/video-player"
 
@@ -17,6 +17,11 @@ export default function HeroSection() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  const handleDownloadGuide = () => {
+    // TODO: Add actual download link or open modal with guide
+    console.log("Download guide clicked")
   }
 
   return (
@@ -59,7 +64,7 @@ export default function HeroSection() {
               <div className="absolute inset-0">
                 <VideoPlayer
                   source="dailymotion"
-                  videoId="k5UwAMFEaaUzFADifdI"
+                  videoId="x9sm4eo"
                   title="Video estrategia fiscal Paraguay"
                   autoplay={false}
                   controls={true}
@@ -85,7 +90,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
               className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
@@ -94,8 +99,19 @@ export default function HeroSection() {
               <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
               Agendar Asesoría Gratuita
             </Button>
-            <p className="text-sm text-gray-500 mt-4">⚡ Respuesta en menos de 24 horas • 🔒 Sin compromiso</p>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 font-semibold rounded-2xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 bg-transparent"
+              onClick={handleDownloadGuide}
+            >
+              <Download className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+              Descargar Guía Legal
+            </Button>
           </div>
+
+          <p className="text-sm text-gray-500 mt-4">⚡ Respuesta en menos de 24 horas • 🔒 Sin compromiso</p>
         </div>
       </div>
     </section>
