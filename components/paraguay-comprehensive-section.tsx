@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { FileCheck, Building2, CheckCircle2, Calendar, ClipboardList, Home, Calculator, Plane } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import CTAWrapper from "@/components/cta-wrapper"
 
 export default function ParaguayComprehensiveSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -148,13 +149,15 @@ export default function ParaguayComprehensiveSection() {
                   Te acompañamos en cada etapa del proceso, desde la planificación fiscal hasta tu residencia fiscal
                   activa, como el acompañamiento a posteriori para asegurar tu estructura en el largo plazo.
                 </p>
-                <Button
-                  onClick={scrollToConsultation}
-                  className="bg-[#225DF6] hover:bg-[#1e52d9] text-white px-6 md:px-8 py-4 md:py-5 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full lg:w-auto hover:scale-105"
-                >
-                  <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
-                  Agendar Asesoría Gratuita
-                </Button>
+                <CTAWrapper showMessage={false}>
+                  <Button
+                    onClick={scrollToConsultation}
+                    className="bg-[#225DF6] hover:bg-[#1e52d9] text-white px-6 md:px-8 py-4 md:py-5 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full lg:w-auto hover:scale-105"
+                  >
+                    <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
+                    Agendar Asesoría Gratuita
+                  </Button>
+                </CTAWrapper>
               </div>
             </div>
           </div>
@@ -285,13 +288,15 @@ export default function ParaguayComprehensiveSection() {
               <p className="text-white/90 text-base md:text-lg mb-8 max-w-2xl mx-auto break-words leading-relaxed">
                 Agenda una sesión estratégica gratuita y descubre cómo Paraguay puede transformar tu situación fiscal.
               </p>
-              <Button
-                onClick={scrollToConsultation}
-                className="bg-white text-[#225DF6] hover:bg-gray-100 px-6 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full sm:w-auto max-w-full"
-              >
-                <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
-                <span className="break-words">Agendar Asesoría Gratuita</span>
-              </Button>
+              <CTAWrapper>
+                <Button
+                  onClick={scrollToConsultation}
+                  className="bg-white text-[#225DF6] hover:bg-gray-100 px-6 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full sm:w-auto max-w-full"
+                >
+                  <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
+                  <span className="break-words">Agendar Asesoría Gratuita</span>
+                </Button>
+              </CTAWrapper>
             </div>
           </div>
         </div>

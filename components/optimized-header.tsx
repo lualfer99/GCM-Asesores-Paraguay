@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { usePathname } from "next/navigation"
 import OptimizedImage from "./image-optimization"
 import { useRouter } from "next/navigation"
+import CTAWrapper from "@/components/cta-wrapper"
 
 interface OptimizedHeaderProps {
   mode?: "full" | "landing"
@@ -117,14 +118,16 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
               </Link>
 
               <div className="hidden md:flex items-center">
-                <Button
-                  size="lg"
-                  className="btn-primary text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-5 text-white font-bold rounded-2xl shadow-lg border border-white/20 whitespace-nowrap"
-                  onClick={() => handleNavClick("#consulta")}
-                >
-                  <Calendar className="w-4 lg:w-5 h-4 lg:h-5 mr-2" />
-                  Agendar Asesoría Gratuita
-                </Button>
+                <CTAWrapper showMessage={false}>
+                  <Button
+                    size="lg"
+                    className="btn-primary text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-5 text-white font-bold rounded-2xl shadow-lg border border-white/20 whitespace-nowrap"
+                    onClick={() => handleNavClick("#consulta")}
+                  >
+                    <Calendar className="w-4 lg:w-5 h-4 lg:h-5 mr-2" />
+                    Agendar Asesoría Gratuita
+                  </Button>
+                </CTAWrapper>
               </div>
             </div>
           </div>
@@ -135,14 +138,16 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
             showFloatingCTA ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 pointer-events-none"
           } ${shouldBounce ? "animate-bounce" : ""}`}
         >
-          <Button
-            size="lg"
-            className="btn-primary w-full text-base px-6 py-5 text-white font-bold rounded-2xl shadow-2xl border-2 border-white/20 backdrop-blur-sm"
-            onClick={() => handleNavClick("#consulta")}
-          >
-            <Calendar className="w-5 h-5 mr-2" />
-            Agendar Asesoría Gratuita
-          </Button>
+          <CTAWrapper showMessage={false}>
+            <Button
+              size="lg"
+              className="btn-primary w-full text-base px-6 py-5 text-white font-bold rounded-2xl shadow-2xl border-2 border-white/20 backdrop-blur-sm"
+              onClick={() => handleNavClick("#consulta")}
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Agendar Asesoría Gratuita
+            </Button>
+          </CTAWrapper>
         </div>
       </>
     )
@@ -192,14 +197,16 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
             </nav>
 
             <div className="flex items-center">
-              <Button
-                size="sm"
-                className="btn-primary text-xs md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-xl shadow-lg border border-white/20"
-                onClick={() => handleNavClick("#consulta")}
-              >
-                <Calendar className="w-5 md:w-6 h-5 md:h-6" />
-                Agendar Asesoría Gratuita
-              </Button>
+              <CTAWrapper showMessage={false}>
+                <Button
+                  size="sm"
+                  className="btn-primary text-xs md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-xl shadow-lg border border-white/20"
+                  onClick={() => handleNavClick("#consulta")}
+                >
+                  <Calendar className="w-5 md:w-6 h-5 md:h-6" />
+                  Agendar Asesoría Gratuita
+                </Button>
+              </CTAWrapper>
             </div>
           </div>
 
@@ -232,14 +239,16 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
                         {item.name}
                       </button>
                     ))}
-                    <Button
-                      size="lg"
-                      className="btn-primary mt-8 text-base px-6 py-4 text-white font-bold rounded-2xl shadow-2xl border-2 border-white/20"
-                      onClick={() => handleNavClick("#consulta")}
-                    >
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Agendar Asesoría
-                    </Button>
+                    <CTAWrapper showMessage={false}>
+                      <Button
+                        size="lg"
+                        className="btn-primary mt-8 text-base px-6 py-4 text-white font-bold rounded-2xl shadow-2xl border-2 border-white/20"
+                        onClick={() => handleNavClick("#consulta")}
+                      >
+                        <Calendar className="w-5 h-5 mr-2" />
+                        Agendar Asesoría
+                      </Button>
+                    </CTAWrapper>
                   </nav>
                 </SheetContent>
               </Sheet>
@@ -263,14 +272,16 @@ export default function OptimizedHeader({ mode = "landing" }: OptimizedHeaderPro
             </div>
 
             <div className="flex items-center">
-              <Button
-                size="sm"
-                className="btn-primary text-xs md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-xl shadow-lg border border-white/20"
-                onClick={() => handleNavClick("#consulta")}
-              >
-                <Calendar className="w-5 md:w-6 h-5 md:h-6" />
-                Asesoría Gratuita
-              </Button>
+              <CTAWrapper showMessage={false}>
+                <Button
+                  size="sm"
+                  className="btn-primary text-xs md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-xl shadow-lg border border-white/20"
+                  onClick={() => handleNavClick("#consulta")}
+                >
+                  <Calendar className="w-5 md:w-6 h-5 md:h-6" />
+                  Asesoría Gratuita
+                </Button>
+              </CTAWrapper>
             </div>
           </div>
         </div>

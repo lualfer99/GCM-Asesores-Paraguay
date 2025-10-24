@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Calendar, Shield, Zap, TrendingUp, Download } from "lucide-react"
 import { useEffect, useState } from "react"
-import VideoPlayer from "@/components/video-player"
+import BunnyVideoPlayer from "@/components/bunny-video-player"
+import CTAWrapper from "@/components/cta-wrapper"
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -62,14 +63,11 @@ export default function HeroSection() {
           <div className="mb-12 w-full max-w-4xl mx-auto">
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <div className="absolute inset-0">
-                <VideoPlayer
-                  source="dailymotion"
-                  videoId="x9sm4eo"
-                  title="Video estrategia fiscal Paraguay"
-                  autoplay={false}
-                  controls={true}
-                  mute={false}
+                <BunnyVideoPlayer
+                  libraryId="518189"
+                  videoId="a7dd0a91-5a34-4841-abb9-eecfe0e6dba2"
                 />
+
               </div>
             </div>
           </div>
@@ -91,14 +89,16 @@ export default function HeroSection() {
           </div>
 
           <div className="flex flex-col gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
-              onClick={handleCTAClick}
-            >
-              <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
-              Agendar Asesoría Gratuita
-            </Button>
+            <CTAWrapper>
+              <Button
+                size="lg"
+                className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
+                onClick={handleCTAClick}
+              >
+                <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+                Agendar Asesoría Gratuita
+              </Button>
+            </CTAWrapper>
 
             <Button
               size="lg"

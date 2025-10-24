@@ -2,6 +2,7 @@
 
 import { Check, X, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import CTAWrapper from "@/components/cta-wrapper"
 
 export default function WhyWorkWithUsSection() {
   const yesItems = [
@@ -114,14 +115,16 @@ export default function WhyWorkWithUsSection() {
 
         {/* CTA */}
         <div className="text-center">
-          <Button
-            size="lg"
-            className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
-            onClick={handleCTAClick}
-          >
-            <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
-            Agendar Asesoría Gratuita
-          </Button>
+          <CTAWrapper>
+            <Button
+              size="lg"
+              className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
+              onClick={handleCTAClick}
+            >
+              <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+              Agendar Asesoría Gratuita
+            </Button>
+          </CTAWrapper>
         </div>
       </div>
     </section>

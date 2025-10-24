@@ -1,15 +1,17 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Calendar, Clock, Shield, CheckCircle, MessageCircle, Phone, Mail } from "lucide-react"
+import { Calendar, Clock, Shield, CheckCircle, MessageCircle, Phone, Mail, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
+import { useVideoProgress } from "@/contexts/video-progress-context"
 
 export default function ConsultationSection() {
   const [showFallback, setShowFallback] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const isLoadingRef = useRef(true)
   const pathname = usePathname()
+  const { hasWatched50Percent } = useVideoProgress()
 
   // URL base de Calendly según la página
   const baseCalendlyUrl = pathname.includes("gestoria-para-llcs")
@@ -124,19 +126,14 @@ Gracias,`)
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-semibold mb-8">
-            <Calendar className="w-4 h-4" />
-            Agenda tu Consulta
-          </div>
-
-          <h2 className="md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2 text-3xl">
-            Agenda ya tu consulta inicial gratuita
-          </h2>
-
-          <p className="text-base md:text-lg lg:text-xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
-            Una reunión de 30 minutos con nuestro equipo donde analizaremos si Paraguay se adapta realmente a tus
-            necesidades de manera legal.
-          </p>
+          {!hasWatched50Percent && (
+            <div className="mb-8 flex items-center justify-center gap-3 bg-amber-50 border-2 border-amber-200 text-amber-800 px-6 py-4 rounded-xl text-base max-w-2xl mx-auto">
+              <AlertCircle className="w-5 h-5 flex-shrink-0" />
+              <span className="font-medium">
+                Para poder agendar una llamada debes haber visto mínimo la mitad del vídeo
+              </span>
+            </div>
+          )}
 
           <div className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-2xl border-2 md:border-4 border-white/20 backdrop-blur-sm mb-8">
             <div className="w-full overflow-hidden rounded-xl md:rounded-2xl">

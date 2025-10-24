@@ -2,6 +2,7 @@
 
 import { Users, PiggyBank, Award, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import CTAWrapper from "@/components/cta-wrapper"
 
 export default function StatsCTASection() {
   const stats = [
@@ -74,13 +75,15 @@ export default function StatsCTASection() {
             <p className="text-white/90 text-base md:text-lg mb-8 max-w-2xl mx-auto break-words leading-relaxed">
               Agenda una consultoría fiscal 1a1 de manera gratuita (valorada en 300€)
             </p>
-            <Button
-              onClick={scrollToConsultation}
-              className="bg-white text-[#225DF6] hover:bg-gray-100 px-6 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full sm:w-auto max-w-full"
-            >
-              <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
-              <span className="break-words">Agendar Asesoría Gratuita</span>
-            </Button>
+            <CTAWrapper>
+              <Button
+                onClick={scrollToConsultation}
+                className="bg-white text-[#225DF6] hover:bg-gray-100 px-6 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold w-full sm:w-auto max-w-full"
+              >
+                <Calendar className="mr-2 h-5 w-5 flex-shrink-0" />
+                <span className="break-words">Agendar Asesoría Gratuita</span>
+              </Button>
+            </CTAWrapper>
           </div>
         </div>
       </div>
