@@ -127,8 +127,8 @@ Gracias,`)
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-semibold mb-8">
-              <Calendar className="w-4 h-4" />
-              Agenda tu Consulta
+            <Calendar className="w-4 h-4" />
+            Agenda tu Consulta
           </div>
 
           <h2 className="md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2 text-3xl">
@@ -148,7 +148,15 @@ Gracias,`)
             </div>
           )}
 
-          <div className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-2xl border-2 md:border-4 border-white/20 backdrop-blur-sm mb-8">
+          <div
+            className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-2xl border-2 md:border-4 border-white/20 backdrop-blur-sm mb-8 relative"
+            style={{
+              cursor: !hasWatched50Percent ? "not-allowed" : "default",
+              pointerEvents: !hasWatched50Percent ? "none" : "auto",
+              opacity: !hasWatched50Percent ? 0.4 : 1,
+              transition: "opacity 0.3s ease-in-out",
+            }}
+          >
             <div className="w-full overflow-hidden rounded-xl md:rounded-2xl">
               {isLoading && !showFallback && (
                 <div className="flex items-center justify-center h-96 bg-gray-50 rounded-2xl">
