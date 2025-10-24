@@ -5,7 +5,7 @@ export default function BenefitsSection() {
     {
       icon: MapPin,
       title: "Tributación territorial",
-      description: "Todos los ingresos que provengan y se generen fuera de Paraguay tributarán a 0%",
+      description: "Todos los ingresos que provengan y se generen fuera de Paraguay tributarán a 0%.",
       highlight: "0% Impuestos",
     },
     {
@@ -26,7 +26,7 @@ export default function BenefitsSection() {
       icon: TrendingUp,
       title: "Proceso cómodo y ágil",
       description:
-        "Con solo 2 viajes podrás completar todo el proceso de residencia. Te recibiremos con transfer privado desde el aeropuerto, te acompañaremos personalmente en todos los trámites y te guiaremos en cada paso hasta obtener tu residencia",
+        "Con solo 2 viajes podrás completar todo el proceso de residencia. Te recibiremos con transfer privado desde el aeropuerto, te acompañaremos personalmente en todos los trámites y te guiaremos en cada paso hasta obtener tu residencia.",
       highlight: "2 Viajes",
     },
     {
