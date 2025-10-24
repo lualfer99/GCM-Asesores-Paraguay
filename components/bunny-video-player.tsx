@@ -14,7 +14,7 @@ export default function BunnyVideoPlayer({ libraryId, videoId }: Props) {
   const maxSeenRef = useRef(0)
   const unlockedRef = useRef(false)
 
-  const src = `https://iframe.mediadelivery.net/embed/${libraryId}/${videoId}`
+  const src = `https://iframe.mediadelivery.net/embed/${libraryId}/${videoId}?token=637d3190-0500-447d-888d-98b153e5a9d6`
 
   useEffect(() => {
     let destroyed = false

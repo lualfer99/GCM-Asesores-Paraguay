@@ -91,7 +91,7 @@ export default function HeroSection() {
           <div className="flex flex-col gap-4 justify-center items-center">
             <CTAWrapper>
               <Button
-                className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
+                className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 text-white font-bold rounded-2xl border-2 border-blue-600 hover:scale-105 transition-transform duration-300"
                 onClick={handleCTAClick}
               >
                 <Calendar className="w-5 md:w-6 h-5 md:h-6 mr-2" />
