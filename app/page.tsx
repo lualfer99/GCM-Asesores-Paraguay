@@ -11,7 +11,6 @@ import OptimizedFooter from "@/components/optimized-footer"
 import { Poppins } from "next/font/google"
 import ConsultationSection from "@/components/consultation-section"
 import StatsCTASection from "@/components/stats-cta-section"
-import { VideoProgressProvider } from "@/contexts/video-progress-context"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -90,22 +89,20 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <VideoProgressProvider>
-      <div className={`${poppins.variable} min-h-screen flex flex-col bg-white text-gray-900`}>
-        <OptimizedHeader mode="landing" />
-        <main className="flex-grow">
-          <HeroSection />
-          <BenefitsSection />
-          <TrustpilotTestimonialsSection />
-          <WhyWorkWithUsSection />
-          <TeamHeroCarousel />
-          <ParaguayComprehensiveSection />
-          <ConsultationSection />
-          <FAQSection />
-          <StatsCTASection />
-        </main>
-        <OptimizedFooter />
-      </div>
-    </VideoProgressProvider>
+    <div className={`${poppins.variable} min-h-screen flex flex-col bg-white text-gray-900`}>
+      <OptimizedHeader mode="landing" />
+      <main className="flex-grow">
+        <HeroSection />
+        <BenefitsSection />
+        <TrustpilotTestimonialsSection />
+        <WhyWorkWithUsSection />
+        <TeamHeroCarousel />
+        <ParaguayComprehensiveSection />
+        <ConsultationSection />
+        <FAQSection />
+        <StatsCTASection />
+      </main>
+      <OptimizedFooter />
+    </div>
   )
 }

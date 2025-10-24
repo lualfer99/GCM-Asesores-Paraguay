@@ -91,7 +91,6 @@ export default function HeroSection() {
           <div className="flex flex-col gap-4 justify-center items-center">
             <CTAWrapper>
               <Button
-                size="lg"
                 className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 text-white font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
                 onClick={handleCTAClick}
               >
@@ -101,7 +100,6 @@ export default function HeroSection() {
             </CTAWrapper>
 
             <Button
-              size="lg"
               variant="outline"
               className="text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 rounded-2xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 bg-transparent"
               onClick={handleDownloadGuide}

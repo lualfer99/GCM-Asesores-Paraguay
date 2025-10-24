@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import "./globals.css"
+import { VideoProgressProvider } from "@/contexts/video-progress-context"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -181,7 +182,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ]),
           }}
         />
-        {children}
+        <VideoProgressProvider>{children}</VideoProgressProvider>
       </body>
     </html>
   )
