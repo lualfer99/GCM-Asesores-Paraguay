@@ -72,23 +72,6 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
     return () => { destroyed = true }
   }, [src, setHasWatched50Percent])
 
-  // Controles propios
-  const togglePlay = () => {
-    const p = playerRef.current
-    if (!p) return
-    if (isPlaying) { p.pause?.(); setIsPlaying(false) } else { p.play?.(); setIsPlaying(true) }
-  }
-  const toggleMute = () => {
-    const p = playerRef.current
-    if (!p) return
-    if (isMuted) { p.unmute?.(); setIsMuted(false) } else { p.mute?.(); setIsMuted(true) }
-  }
-  const goFullscreen = () => {
-    // PlayerJS no siempre expone fullscreen; usa el iframe nativo:
-    const el = iframeRef.current
-    ;(el as any)?.requestFullscreen?.()
-  }
-
   return (
     <div className="relative max-w-4xl mx-auto mb-12">
       <div className="aspect-video bg-black rounded-2xl overflow-hidden relative shadow-2xl border-4 border-white">
@@ -104,17 +87,6 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
           loading="lazy"
         />
         {/* barra de controles propia */}
-        <div className="absolute bottom-3 left-0 right-0 z-20 flex items-center justify-center gap-3">
-          <button onClick={togglePlay} className="px-3 py-2 rounded-lg bg-white/90 text-black text-sm font-semibold">
-            {isPlaying ? "Pausar" : "Reproducir"}
-          </button>
-          <button onClick={toggleMute} className="px-3 py-2 rounded-lg bg-white/90 text-black text-sm font-semibold">
-            {isMuted ? "Activar sonido" : "Silenciar"}
-          </button>
-          <button onClick={goFullscreen} className="px-3 py-2 rounded-lg bg-white/90 text-black text-sm font-semibold">
-            Pantalla completa
-          </button>
-        </div>
       </div>
     </div>
   )
