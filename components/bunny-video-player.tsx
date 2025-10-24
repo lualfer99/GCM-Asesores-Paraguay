@@ -86,7 +86,6 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
           title="VSL"
           loading="lazy"
         />
-        {/* barra de controles propia */}
       </div>
     </div>
   )

@@ -126,6 +126,14 @@ Gracias,`)
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-semibold mb-8">
+              <Calendar className="w-4 h-4" />
+              Agenda tu Consulta
+          </div>
+
+          <h2 className="md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2 text-3xl">
+            Agenda ya tu consulta inicial gratuita
+          </h2>
           {!hasWatched50Percent && (
             <div className="mb-8 flex items-center justify-center gap-3 bg-amber-50 border-2 border-amber-200 text-amber-800 px-6 py-4 rounded-xl text-base max-w-2xl mx-auto">
               <AlertCircle className="w-5 h-5 flex-shrink-0" />
