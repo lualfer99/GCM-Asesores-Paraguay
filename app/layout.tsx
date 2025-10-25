@@ -148,6 +148,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://assets.mediadelivery.net" />
         <link rel="dns-prefetch" href="https://assets.calendly.com" />
         <link rel="dns-prefetch" href="https://js.stripe.com" />
+        <link rel="preconnect" href="https://m.stripe.network" />
+        <link rel="preload" as="style" href="/globals.css" />
+        <link rel="stylesheet" href="/globals.css" media="print" onLoad="this.media='all'" />
+        <noscript>
+          <link rel="stylesheet" href="/globals.css" />
+        </noscript>
       </head>
       <body className="font-poppins antialiased bg-white text-gray-900">
         <Script
