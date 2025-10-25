@@ -24,11 +24,30 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
     const ensure = () =>
       new Promise<void>((r) => {
         if ((window as any).playerjs) return r()
+
+        // Check if script already exists
+        const existingScript = document.querySelector('script[src*="playerjs"]')
+        if (existingScript) {
+          // Wait for it to load
+          const checkInterval = setInterval(() => {
+            if ((window as any).playerjs) {
+              clearInterval(checkInterval)
+              r()
+            }
+          }, 100)
+          setTimeout(() => {
+            clearInterval(checkInterval)
+            r()
+          }, 5000)
+          return
+        }
+
         const s = document.createElement("script")
         s.src = "//assets.mediadelivery.net/playerjs/playerjs-latest.min.js"
         s.async = true
+        s.defer = true // Add defer for better performance
         s.onload = () => r()
-        s.onerror = () => r() // Continue even if script fails
+        s.onerror = () => r()
         document.body.appendChild(s)
       })
 
@@ -79,7 +98,6 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
   return (
     <div className="relative max-w-4xl mx-auto mb-12">
       <div className="aspect-video bg-black rounded-2xl overflow-hidden relative shadow-2xl border-4 border-white">
-        {/* bloquea clicks para evitar interacción con timeline del player */}
         <div className="absolute inset-0 z-10" style={{ pointerEvents: "none" }} />
         <iframe
           ref={iframeRef}
