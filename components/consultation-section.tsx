@@ -66,12 +66,9 @@ Gracias,`)
     <section id="consulta" className="py-10 md:py-16 lg:py-20 gradient-bg relative overflow-hidden">
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 md:mb-8 px-2 text-3xl">
-            Agenda ya tu consulta inicial gratuita
-          </h2>
-          <p className="text-base md:text-lg lg:text-xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
-            Una reunión de 30 minutos con nuestro equipo donde analizaremos si Paraguay se adapta realmente a tus
-            necesidades de manera legal.
+          <h2 className="md:text-4xl font-bold text-white mb-6">Agenda tu consulta inicial gratuita</h2>
+          <p className="text-white/90 mb-8 max-w-3xl mx-auto">
+            Asesoría personal con nuestro equipo.
           </p>
 
           {!hasWatched90Percent && (
