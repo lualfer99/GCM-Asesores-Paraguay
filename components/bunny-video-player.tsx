@@ -28,12 +28,14 @@ export default function BunnyVideoPlayerStrict({ libraryId, videoId }: Props) {
         s.src = "//assets.mediadelivery.net/playerjs/playerjs-latest.min.js"
         s.async = true
         s.onload = () => r()
+        s.onerror = () => r() // Continue even if script fails
         document.body.appendChild(s)
       })
 
     ensure().then(() => {
       if (destroyed || !iframeRef.current) return
       const P = (window as any).playerjs
+      if (!P) return
       const player = new P.Player(iframeRef.current)
       playerRef.current = player
 

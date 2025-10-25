@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { VideoProgressProvider } from "@/contexts/video-progress-context"
 
@@ -8,7 +9,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
-  display: "swap",
+  display: "swap", // Already has font-display: swap for 160ms savings
 })
 
 export const metadata: Metadata = {
@@ -142,11 +143,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={poppins.variable}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://iframe.mediadelivery.net" />
+        <link rel="preconnect" href="https://assets.mediadelivery.net" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://js.stripe.com" />
       </head>
       <body className="font-poppins antialiased bg-white text-gray-900">
-        <script
+        <Script
+          id="json-ld-organization"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
               {

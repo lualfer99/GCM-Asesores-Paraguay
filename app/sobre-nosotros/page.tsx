@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sobre Nosotros - GCM Asesores",
     description: "Expertos en fiscalidad internacional para negocios digitales. Nuestro compromiso es tu éxito.",
-    images: ["/images/logo-blue.png"],
+    images: ["/images/logo-blue.webp"],
   },
 }
 

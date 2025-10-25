@@ -5,10 +5,12 @@ import { Calendar, Clock, Shield, CheckCircle, MessageCircle, Phone, Mail, Alert
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
 import { useVideoProgress } from "@/contexts/video-progress-context"
+import Script from "next/script"
 
 export default function ConsultationSection() {
   const [showFallback, setShowFallback] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+  const [scriptLoaded, setScriptLoaded] = useState(false)
   const isLoadingRef = useRef(true)
   const pathname = usePathname()
   const { hasWatched90Percent } = useVideoProgress()
@@ -50,24 +52,19 @@ export default function ConsultationSection() {
     }
   }, [baseCalendlyUrl])
 
+  const handleScriptLoad = () => {
+    setScriptLoaded(true)
+    setIsLoading(false)
+    isLoadingRef.current = false
+  }
+
+  const handleScriptError = () => {
+    setShowFallback(true)
+    setIsLoading(false)
+    isLoadingRef.current = false
+  }
+
   useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://assets.calendly.com/assets/external/widget.js"
-    script.async = true
-
-    script.onload = () => {
-      setIsLoading(false)
-      isLoadingRef.current = false
-    }
-
-    script.onerror = () => {
-      setShowFallback(true)
-      setIsLoading(false)
-      isLoadingRef.current = false
-    }
-
-    document.head.appendChild(script)
-
     const timeoutId = setTimeout(() => {
       if (isLoadingRef.current) {
         setShowFallback(true)
@@ -77,9 +74,6 @@ export default function ConsultationSection() {
 
     return () => {
       clearTimeout(timeoutId)
-      if (document.head.contains(script)) {
-        document.head.removeChild(script)
-      }
     }
   }, [])
 
@@ -119,6 +113,13 @@ Gracias,`)
 
   return (
     <section id="consulta" className="py-10 md:py-16 lg:py-20 gradient-bg relative overflow-hidden">
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="lazyOnload"
+        onLoad={handleScriptLoad}
+        onError={handleScriptError}
+      />
+
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-black/5"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -166,9 +167,8 @@ Gracias,`)
                 </div>
               )}
 
-              {!showFallback && (
-                <iframe src={finalCalendlyUrl} width="100%" height="800" frameBorder="0" />
-                /**<div
+              {!showFallback && scriptLoaded && (
+                <div
                   className="calendly-inline-widget"
                   data-url={finalCalendlyUrl}
                   style={{
@@ -176,7 +176,7 @@ Gracias,`)
                     width: "100%",
                     height: "800px",
                   }}
-                />**/
+                />
               )}
 
               {showFallback && (
