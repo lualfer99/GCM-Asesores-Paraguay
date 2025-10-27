@@ -1,8 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Calendar, Clock, Shield, CheckCircle, MessageCircle, Phone, Mail, AlertCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { AlertCircle } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useVideoProgress } from "@/contexts/video-progress-context"
 
@@ -11,9 +10,7 @@ export default function ConsultationSection() {
   const pathname = usePathname()
   const { hasWatched90Percent } = useVideoProgress()
 
-  const baseCalendlyUrl = pathname.includes("gestoria-para-llcs")
-    ? "https://calendly.com/d/cndt-ytb-8j3/consulta-fiscal-para-optimizar-una-llc"
-    : "https://calendly.com/d/cncj-m4f-7xt/consulta-fiscal-para-crear-una-llc"
+  const baseCalendlyUrl = "https://calendly.com/d/cs8k-x7t-xp7/consulta-fiscal-optimizar-tu-fiscalidad-en-paraguay"
 
   const [finalCalendlyUrl, setFinalCalendlyUrl] = useState(baseCalendlyUrl)
 
@@ -81,7 +78,7 @@ Gracias,`)
             </div>
           )}
 
-          {(hasWatched90Percent && calendlyReady) ? (
+          {hasWatched90Percent && calendlyReady ? (
             <iframe
               src={finalCalendlyUrl}
               width="100%"
@@ -89,7 +86,7 @@ Gracias,`)
               style={{
                 border: "none",
                 borderRadius: "16px",
-                boxShadow: "0px 12px 40px rgba(0,0,0,0.15)"
+                boxShadow: "0px 12px 40px rgba(0,0,0,0.15)",
               }}
             />
           ) : hasWatched90Percent ? (

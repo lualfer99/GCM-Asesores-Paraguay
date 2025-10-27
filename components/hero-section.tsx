@@ -1,13 +1,14 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Calendar, Shield, Zap, TrendingUp, Download } from "lucide-react"
+import { Calendar, Shield, Zap, TrendingUp, Download, CheckCircle } from "lucide-react"
 import { useEffect, useState } from "react"
 import BunnyVideoPlayer from "@/components/bunny-video-player"
 import CTAWrapper from "@/components/cta-wrapper"
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const [downloadSuccess, setDownloadSuccess] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
@@ -21,8 +22,15 @@ export default function HeroSection() {
   }
 
   const handleDownloadGuide = () => {
-    // TODO: Add actual download link or open modal with guide
-    console.log("Download guide clicked")
+    const link = document.createElement("a")
+    link.href = "/guia-residencia-fiscal-paraguay.pdf"
+    link.download = "Guia-Residencia-Fiscal-Paraguay-GCM.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+
+    setDownloadSuccess(true)
+    setTimeout(() => setDownloadSuccess(false), 3000)
   }
 
   return (
@@ -63,11 +71,7 @@ export default function HeroSection() {
           <div className="mb-12 w-full max-w-4xl mx-auto">
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <div className="absolute inset-0">
-                <BunnyVideoPlayer
-                  libraryId="518189"
-                  videoId="a7dd0a91-5a34-4841-abb9-eecfe0e6dba2"
-                />
-
+                <BunnyVideoPlayer libraryId="518189" videoId="a7dd0a91-5a34-4841-abb9-eecfe0e6dba2" />
               </div>
             </div>
           </div>
@@ -101,11 +105,25 @@ export default function HeroSection() {
 
             <Button
               variant="outline"
-              className="text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 rounded-2xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 bg-transparent"
+              className={`text-lg md:text-xl px-8 md:px-12 py-4 w-full max-w-md md:py-6 rounded-2xl border-2 transition-all duration-300 ${
+                downloadSuccess
+                  ? "border-green-600 text-green-600 bg-green-50"
+                  : "border-blue-600 text-blue-600 bg-transparent hover:bg-blue-50 hover:scale-105"
+              }`}
               onClick={handleDownloadGuide}
+              disabled={downloadSuccess}
             >
-              <Download className="w-5 md:w-6 h-5 md:h-6 mr-2" />
-              Descargar Guía Legal
+              {downloadSuccess ? (
+                <>
+                  <CheckCircle className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+                  ¡Guía Descargada!
+                </>
+              ) : (
+                <>
+                  <Download className="w-5 md:w-6 h-5 md:h-6 mr-2" />
+                  Descargar Guía Legal
+                </>
+              )}
             </Button>
           </div>
 
