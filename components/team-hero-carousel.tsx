@@ -47,6 +47,18 @@ const teamMembers = [
     image: "/images/team/jesus-ros.webp",
     alternative_image: "/assets/placeholder.svg",
   },
+  {
+    name: "David Gamíndez",
+    position: "Sales Tax Advisor",
+    image: "/images/team/david-gamindez.webp",
+    alternative_image: "/assets/placeholder.svg",
+  },
+  {
+    name: "David Peñas",
+    position: "Sales Tax Advisor",
+    image: "/images/team/david-penas.webp",
+    alternative_image: "/assets/placeholder.svg",
+  },
 ]
 
 export function TeamHeroCarousel() {
