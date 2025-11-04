@@ -8,19 +8,43 @@ const teamMembers = [
   {
     name: "Miguel Navarro",
     position: "Dirección",
-    image: "/team/miguel-navarro.avif",
+    image: "/images/team/miguel-navarro.webp",
     alternative_image: "/assets/placeholder.svg",
   },
   {
     name: "Vansh Pursnani",
     position: "Dirección",
-    image: "/team/vans-pursnani.avif",
+    image: "/images/team/vansh-pursnani.webp",
     alternative_image: "/assets/placeholder.svg",
   },
   {
     name: "Carlos Gomis",
     position: "Head of Tax Consultancy",
-    image: "/team/carlos-gomis.avif",
+    image: "/images/team/carlos-gomis.webp",
+    alternative_image: "/assets/placeholder.svg",
+  },
+  {
+    name: "Daniel Kappes",
+    position: "Tax Advisor",
+    image: "/images/team/daniel-kappes.webp",
+    alternative_image: "/assets/placeholder.svg",
+  },
+  {
+    name: "Miquel Juny",
+    position: "Sales Tax Advisor",
+    image: "/images/team/miquel-juny.webp",
+    alternative_image: "/assets/placeholder.svg",
+  },
+  {
+    name: "Ainara Cano",
+    position: "Tax Consultant",
+    image: "/images/team/ainara-cano.webp",
+    alternative_image: "/assets/placeholder.svg",
+  },
+  {
+    name: "Jesús Ros",
+    position: "Sales Tax Advisor",
+    image: "/images/team/jesus-ros.webp",
     alternative_image: "/assets/placeholder.svg",
   },
 ]
